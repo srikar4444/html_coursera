@@ -10,6 +10,7 @@ h1{
 body{
 	margin:0;
 	padding:0;
+
 }
 h3, p{
 	font-family:sans-serif, Helvetica, "Times New Roman";
@@ -33,6 +34,8 @@ h3{
 	margin-top:10px;
 	margin-bottom:10px;
 	padding:10px;
+
+
 }
 
 #chicken{
@@ -48,11 +51,14 @@ h3{
 section{
 	border:1px solid black;
 	margin:0 0 5px 0;
-	background-color: #C0C0C0;
+	/*background-color: #C0C0C0;*/
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 
 }
 section p{
-	padding:0 4px 4px 4px;
+	padding:0 4px 0px 4px;
 }
 .row{
 	width:100%;
