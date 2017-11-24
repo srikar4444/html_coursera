@@ -1,26 +1,24 @@
 /*styles of website*/
-body{
+
+/*Style for body of html, if I remove the html tag then it is not
+ applied. Have to check why*/
+
+html > body {
 	font-size:16px;
 	color:#fff;
-	background-color:#61122f;
+	background-color : #61122f;
 	font-family: 'Oxygen', sans-serif;
 }
+
 
 /*Header Navigation bar*/
 #header-nav{
 	background-color: #f6b319;
 	border-radius: 0;
 	border: 0;
+
 }
 
-/*Restaurant logo in Nav bar*/
-#logo-img{
-	background: url("../images/restaurant_logo3.jpg") no-repeat;
-	width: 100px;
-	height:	100px;
-	margin: 10px 20px 10px 0;
-	border: 5px solid green;
-}
 
 .navbar-brand{
 	padding-top:25px;
@@ -29,7 +27,7 @@ body{
 .navbar  h1{  /*Restaurant name*/
 	font-family:'Lora',serif;
 	color:#557c3e;
-	font-size:1.2em;
+	font-size:1.5em;
 	text-transform: uppercase;
 	text-shadow: 1px 1px 1px #222;
 	margin-top:0;
@@ -41,14 +39,14 @@ body{
 	text-decoration: none;
 }
 
-.navbar-brand p {   /*Kosher certification*/
+.navbar-brand #kosher {   /*Kosher certification*/
 	color:#000;
 	text-transform: uppercase;
 	font-size:.7em;
 	margin-top : 15px;
 }
 
-.navbar-brand p span{ /*star-k*/
+.navbar-brand #kosher span{ /*star-k*/
 	vertical-align: middle;
 }
 
@@ -78,16 +76,14 @@ body{
 	padding-bottom:0;
 }
 
-
-
+	/*We-deliver*/
 #phone div{
 	color:#557c3e;
-
 	padding-right : 15px;
 }
 
-.navbar-header button.navbar-toggler, .navbar-header  {
-	border:1px solid #61122f;
+#header-nav button.navbar-toggler  {
+	border:2px solid #61122f;
 }
 
 /*#header-nav{
@@ -98,3 +94,189 @@ body{
 	text-align: center;
 	margin-top: -30px;
 }
+
+#header-nav >button.navbar-toggler ,#toggle-icon{
+	clear:both;
+}
+
+/*	END HEADER	*/
+
+/*******************************************************/
+
+/*	HOME PAGE 	*/
+
+.container .jumbotron {
+	box-shadow: 0 0 50px #3f0c1f;
+	border: 2px solid #3f0c1f;
+}
+
+/***********************media queries********************/
+/* Extra Large screens*/
+@media (min-width:1200px) {
+	
+	/*Restaurants logo*/
+	#logo-img{
+		background: url("../images/restaurant_logo2.jpg") no-repeat;
+		width: 150px;
+		height:	150px;
+		margin: 10px 20px 10px 0;
+		border: 5px solid green;
+	}
+
+	/* main image of the home page*/
+	/*Here we are using .container .jumbotron because the page views
+	it as this so if we write just .jumbotron it doesnot work*/
+	.container .jumbotron {
+		background : url("../images/jumbotron_1200.jpg") no-repeat;
+		height : 675px;
+	}
+}
+
+/* Large screens*/
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+	/*Restaurants logo*/
+	#logo-img{
+		background: url("../images/restaurant_logo3.jpg") no-repeat;
+		width: 100px;
+		height:	100px;
+		margin: 10px 10px 10px 0;
+		border: 5px solid green;
+	}
+
+	/* Main image in the home page*/
+	.container .jumbotron {
+		background : url("../images/jumbotron_992.jpg") no-repeat;
+		height: 558px;
+	}
+}
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	/*Restaurants logo*/
+	#logo-img{
+		background: url("../images/restaurant_logo3.jpg") no-repeat;
+		width: 100px;
+		height:	100px;
+		margin: 10px 10px 10px 0;
+		border: 5px solid green;
+	}
+
+	/*Main image in the home page*/
+	.container .jumbotron {
+		background : url("../images/jumbotron_768.jpg") no-repeat;
+		height : 432px;
+	}
+}
+
+/* Small devices*/
+@media (min-width : 544px) and (max-width: 767px) {
+	.navbar-brand {
+		padding-top:10px;
+		height:80px;
+	}
+	.navbar-brand h1 { /*Restaurant name*/
+		padding-top: 10px;
+		font-size: 4.5vw;
+	}
+	.navbar-brand p {  /*kosher certificate symbol*/
+		font-size: 0.5em;
+		margin-top:12px;
+	}
+
+	.navbar-brand p img { /*star symbol of kosher certificate*/
+ 		height:20px;
+	}
+
+	#nav-list a {
+		font-size: 2.5vw;
+	}
+
+
+	#sm-deliver {
+		color: #61122f;
+	}
+
+	#call-btn > #sm-deliver {
+		padding:0;
+		margin:0;
+		border:0;
+		clear: both;
+		font-size: 2vw;
+		color:#ffffff;
+	}
+	#call-btn > a {
+    	font-size: 1.2em;
+    	display: block;
+    	margin: 10px 10px 2px 10px;
+    	padding:  2px;
+    	border: 2px solid #fff;
+    	background-color: #f6b319;
+   		color: #951c49;
+    	padding-top : 2px;
+    	line-height: 40%;
+    	font-size: 3vw;
+	}
+	
+	/*	Main image in the home page*/
+	.container .jumbotron {
+		background : url("../images/jumbotron_544.jpg") no-repeat;
+		height : 306px;
+	}
+}
+
+@media (max-width: 543px) {
+	.navbar-brand {
+		padding-top:10px;
+		height:80px;
+	}
+	.navbar-brand h1 { /*Restaurant name*/
+		padding-top: 10px;
+		font-size: 4.5vw;
+	}
+	.navbar-brand p {  /*kosher certificate symbol*/
+		font-size: 0.5em;
+		margin-top:12px;
+	}
+
+	.navbar-brand p img { /*star symbol of kosher certificate*/
+ 		height:20px;
+	}
+
+	#nav-list a {
+		font-size: 2.5vw;
+	}
+
+
+	#sm-deliver {
+		color: #61122f;
+	}
+
+	#call-btn > #sm-deliver {
+		padding:0;
+		margin:0;
+		border:0;
+		clear: both;
+		font-size: 2vw;
+		color:#ffffff;
+	}
+	#call-btn > a {
+    	font-size: 1.2em;
+    	display: block;
+    	margin: 10px 10px 2px 10px;
+    	padding:  2px;
+    	border: 2px solid #fff;
+    	background-color: #f6b319;
+   		color: #951c49;
+    	padding-top : 2px;
+    	line-height: 40%;
+    	font-size: 3vw;
+	}
+	
+	/*	Main image in the home page*/
+	.container .jumbotron {
+		margin-top : 30px;
+		padding : 10px;
+	}
+}
+
