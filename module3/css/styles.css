@@ -192,6 +192,43 @@ hr {
 
 /* END FOOTER */
 
+
+/************ Menu Categories page ****************************/
+
+#menu-categories-title > h2{
+	padding: 20px 0 0 0;
+}
+
+#main-content > #note {
+	margin-bottom: 20px;
+}
+
+.category-tile {
+	position : relative;
+	border : 2px solid #3f0c1f;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px;
+}
+
+
+.category-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color: #000000;
+	color: #ffffff;
+	opacity: .8;
+}
+
+
+/************ End of Menu Categories page ******************/
+
 /***********************media queries********************/
 /* Extra Large screens*/
 @media (min-width:1200px) {
@@ -389,6 +426,18 @@ hr {
 		margin : 0 auto 15px auto;
 	}
 	
+	/* Just a extra extra small class creation*/
+	/*
+		.col-xxs-12 {
+			position: relative;
+			min-height: 1px;
+			padding-right: 15px;
+			padding-left: 15px;
+			float: left;
+			width: 100%;
+		}
+	*/
+
 		/* FOOTER */
 	.card-footer section {
 		margin-bottom: 30px;
@@ -405,5 +454,6 @@ hr {
 	}
 
 	/* END FOOTER */
+
 }
 
